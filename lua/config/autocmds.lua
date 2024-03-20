@@ -2,8 +2,7 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
--- vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
-vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
   pattern = { "*" },
   command = "silent! write",
   nested = true,
