@@ -8,3 +8,5 @@ if vim.lsp.inlay_hint then
     vim.lsp.inlay_hint(0, true)
   end, { desc = "Toggle inlay hints" })
 end
+
+vim.keymap.set("n", "<leader>p", '"_dp', { desc = "Paste without copying" })
