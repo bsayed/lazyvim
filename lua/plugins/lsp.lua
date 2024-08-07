@@ -8,7 +8,7 @@ return {
         end,
       },
       -- lspconfig enable inlay hints by default
-      inlay_hints = { enabled = true },
+      inlay_hints = { enabled = false },
       servers = {
         lua_ls = {
           settings = {
