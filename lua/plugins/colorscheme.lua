@@ -44,7 +44,12 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = { style = "moon" },
+    opts = {
+      style = "storm",
+      on_colors = function(colors)
+        colors.border = "#FF8C00"
+      end,
+    },
   },
   { "shaunsingh/nord.nvim" },
   { "navarasu/onedark.nvim" },
@@ -60,9 +65,12 @@ return {
     -- end,
   },
   {
+    "rmehri01/onenord.nvim",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-frappe",
+      colorscheme = "tokyonight-storm",
     },
   },
 }
