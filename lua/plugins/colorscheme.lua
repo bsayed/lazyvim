@@ -47,7 +47,8 @@ return {
     opts = {
       style = "storm",
       on_colors = function(colors)
-        colors.border = "#FF8C00"
+        -- colors.border = "#FF8C00"
+        colors.border = "#edf3f1"
       end,
     },
   },
