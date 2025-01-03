@@ -3,8 +3,25 @@ return {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
+    config = function()
+      require("catppuccin").setup({
+        custom_highlights = function(colors)
+          return {
+            WinSeparator = { fg = "#edf3f1", bg = "NONE" }, -- Set border foreground to white
+          }
+        end,
+      })
+      vim.cmd.colorscheme("catppuccin")
+    end,
     opts = {
       integrations = {
+        custom_highlights = function(colors)
+          -- colors.border = "#FF8C00"
+          -- colors.border = "#edf3f1"
+          return {
+            FloatBorder = { fg = "#edf3f1" },
+          }
+        end,
         aerial = true,
         alpha = true,
         cmp = true,
@@ -71,7 +88,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-storm",
+      colorscheme = "catppuccin-macchiato",
     },
   },
 }
